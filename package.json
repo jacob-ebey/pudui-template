@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "pudui": "0.0.13",
+    "pudui": "0.0.14",
     "remix": "3.0.0-beta.0"
   },
   "devDependencies": {
