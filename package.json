@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "imports": {
+    "#*": "./app/*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "pudui": "0.0.13",
+    "remix": "3.0.0-beta.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.2.4",
+    "@types/node": "^25.6.0",
+    "@typescript/native-preview": "7.0.0-dev.20260506.1",
+    "oxfmt": "~0.48.0",
+    "oxlint": "^1.63.0",
+    "oxlint-tsgolint": "~0.22.1",
+    "tailwindcss": "^4.2.4",
+    "typescript": "^6.0.3",
+    "vite-plus": "~0.1.20"
+  }
+}
