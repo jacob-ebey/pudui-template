@@ -5,6 +5,7 @@ import { defineConfig, type Plugin, type RunnableDevEnvironment } from "vite-plu
 
 const browserEntry = "app/browser.tsx";
 const routerEntry = "app/router.ts";
+const routerBuild = "./dist/ssr/server.mjs";
 
 export default defineConfig({
   lint: {
@@ -54,10 +55,10 @@ function devServer(): Plugin {
     },
     async configurePreviewServer(server) {
       // @ts-ignore - file is JS and may or may not exist yet
-      const { router } = await import("./dist/ssr/server.mjs");
+      const { router } = await import(routerBuild);
       const listener = createRequestListener(router.fetch);
       return () => {
-        server.middlewares.use((req, res) => {
+        server.middlewares.use(async (req, res) => {
           req.url = req.originalUrl;
           listener(req, res);
         });
